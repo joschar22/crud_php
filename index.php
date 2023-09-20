@@ -46,8 +46,11 @@ foreach ($registros as $persona):
       <td><?php echo $persona->Apellido?></td>
       <td><?php echo $persona->Direccion?></td>
 
-      <td class="bot" ><a href="borrar.php?Id=<?php echo $persona-> Id ?>"><input type='button' name='del' id='del' value='Borrar'></a></td>
-      <td class='bot'><input type='button' name='up' id='up' value='Actualizar'></a></td>
+      <td class="bot" ><a href="borrar.php?id=<?php echo $persona-> Id ?>"><input type='button' name='del' id='del' value='Borrar'></a></td>
+      <td class='bot'><a href="editar.php?id=<?php echo $persona-> Id ?> & 
+      nom=<?php echo $persona-> Nombre ?>& 
+      ape=<?php echo $persona-> Apellido ?>& 
+      dir=<?php echo $persona-> Direccion ?>"><input type='button' name='up' id='up' value='Actualizar'></a></td>
     </tr>
 <?php
 endforeach ;
@@ -61,6 +64,7 @@ endforeach ;
       <td class='bot'><input type='submit' name='cr' id='cr' value='Insertar'></td>
     </tr>
   </table>
+
 
   <p>&nbsp;</p>
 </body>
